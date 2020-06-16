@@ -3,12 +3,18 @@
 		background-color : red;
 		font-size: 21px;
 	}
+	td{
+		border: 2px solid blue;
+	width: 30px;
+	height: 30px;
+	}
 </style>
 
 <script>
 	function JAVAzooi(){
 		var mijnvar = document.getElementById("denaam").value;
-		alert(mijnvar);
+		document.getElementById("show").innerHTML = mijnvar;
+		//alert(mijnvar);
 	}
 </script>
 
@@ -16,13 +22,9 @@ Geef uw naam:
 <input type=text id="denaam">
 <input type=button value="klik maar" onclick="JAVAzooi()">
 
-<hr>
-<hr>
-<hr>
-hoi
+Welkom <b id="show" onclick="JAVAzooi()"> Hier komt je naam te staan </b>
 
-Vandaag gaan we coderen oke
-
-<b onclick="JAVAzooi()"> een stuk tekst </b>
-<textarea> iets van text </textarea>
+<table>
+<tr><td></td></tr>
+</table>
 
