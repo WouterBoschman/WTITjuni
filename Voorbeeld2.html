@@ -1,26 +1,42 @@
 <html>
 <head>
 <style>
+	td{
+		border: 2px solid green;
+	width: 30px;
+	height: 30px;
+		width: 30px;
+		height: 30px;
+	}
 </style>
 <script>
 	
 	function start(){
-		var Hoppa =document.getElementById("getal").value;
-		for(var x = 0; x < Hoppa; x++){
-		document.getElementById("show").innerHTML = x+1;
-		console.log(x+1);
-		}
+		var status = [0,1,2,0,0,2]
 	
-
+	for(var s = 0 ; s <status.length; s++){
+		var vakjeid = "vakje"+s; 
+		if(status[s] == 1){
+			var elem = document.getElementById(vakjeid);
+		elem.bgColor = 'red';
+                }
+		if(status[s] == 2){
+			var elem = document.getElementById(vakjeid);
+		elem.bgColor = 'yellow';
+		}
+		if(status[s] == 0){
+			var elem = document.getElementById(vakjeid);
+		elem.bgColor = 'blue';
+		}
 	}
-
-
-
+}
 </script>
 </head>
 <body>
- <input type="number" id="getal">
- <input type="button" onclick="start()" value="Begin  met tellen">
+ <input type="button" onclick="start()" value="laat de kleuren zien">
  <b id="show"></b>
+<table>
+<tr><td id="vakje0"></td></tr><tr><td id="vakje1"></td></tr><tr><td id="vakje2"></td></tr><tr><td id="vakje3"></td></tr><tr><td id="vakje4"></td></tr><tr><td id="vakje5"></td></tr>
+</table>
 </body>
 </html>
