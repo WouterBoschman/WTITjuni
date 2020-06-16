@@ -3,21 +3,24 @@
 <style>
 </style>
 <script>
-	var mijngetal = 0;
+	
 	function start(){
-	mijngetal ++
-	if (mijngetal %2==0){		
-		var kleur = "ik ben rood";
-        }
-	if (mijngetal %2==1){
-		var kleur = "ik ben geel";
+		var Hoppa =document.getElementById("getal").value;
+		for(var x = 0; x < Hoppa; x++){
+		document.getElementById("show").innerHTML = x+1;
+		console.log(x+1);
+		}
+	
+
 	}
-	console.log(kleur);		
-	}
+
+
 
 </script>
 </head>
 <body>
- <input type="button" onclick="start()" value="Klik mij">
+ <input type="number" id="getal">
+ <input type="button" onclick="start()" value="Begin  met tellen">
+ <b id="show"></b>
 </body>
 </html>
