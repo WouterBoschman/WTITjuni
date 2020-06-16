@@ -1,3 +1,4 @@
+<html>
 <style>
 	b{
 		background-color : red;
@@ -5,8 +6,8 @@
 	}
 	td{
 		border: 2px solid blue;
-	width: 30px;
-	height: 30px;
+		width: 30px;
+		height: 30px;
 	}
 </style>
 
@@ -15,6 +16,10 @@
 		var mijnvar = document.getElementById("denaam").value;
 		document.getElementById("show").innerHTML = mijnvar;
 		//alert(mijnvar);
+	}
+	function vakjeVullen(vakjeid){
+		var elem = document.getElementById(vakjeid);
+		elem.bgColor = 'red';
 	}
 </script>
 
@@ -25,6 +30,7 @@ Geef uw naam:
 Welkom <b id="show" onclick="JAVAzooi()"> Hier komt je naam te staan </b>
 
 <table>
-<tr><td></td></tr>
+<tr><td id="vakje00" onclick="vakjeVullen('vakje00')"></td><td id="vakje01"></td></tr>
+<tr><td id="vakje10" onclick="vakjeVullen('vakje10')"></td><td id="vakje11"></td></tr>
 </table>
-
+</html>
